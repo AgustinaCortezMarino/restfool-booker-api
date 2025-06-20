@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+
+# VS Code settings
+.vscode/
+
+# PyCharm
+.idea/
+
+# Test reports
+htmlcov/
+*.html
+*.xml
+allure-report/
+allure-results/
+
+# Cache
+.pytest_cache/
+
+# Environment files
+.env
