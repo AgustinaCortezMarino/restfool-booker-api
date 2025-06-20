@@ -32,7 +32,7 @@ It was developed as part of a technical challenge to showcase clean code practic
 ## ⚙️ Setup
 
 ### 1. Clone the repository:
-- git clone https://github.com/<your-username>/restful-booker-api.git
+- git clone https://github.com/AgustinaCortezMarino/restfool-booker-api
 - cd restful-booker-api
 
 ### 2. Create and activate a virtual environment:
