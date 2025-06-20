@@ -20,7 +20,7 @@ def generate_random_booking_data():
         },
         "additionalneeds": fake.word()
     }
-    logging.info(f"🔧 Booking generado aleatoriamente: {booking}")
+    logging.info(f"🔧 Random booking generation: {booking}")
     return booking
 
 def create_booking(booking_data):
@@ -29,8 +29,8 @@ def create_booking(booking_data):
     response = requests.post(url, json=booking_data, headers=headers)
 
     if response.status_code == 200 and "bookingid" in response.json():
-        logging.info(f"✅ Reserva creada con éxito. ID: {response.json()['bookingid']}")
+        logging.info(f"✅ Booking successfully created - id: {response.json()['bookingid']}")
     else:
-        logging.warning(f"❌ Error al crear reserva: {response.status_code} - {response.text}")
+        logging.warning(f"❌ Error in booking creation: {response.status_code} - {response.text}")
 
     return response

@@ -13,8 +13,8 @@ def get_auth_token():
     response = requests.post(url, json=payload)
     if response.status_code == 200:
         token = response.json().get("token")
-        logging.info(f"🔑 Token obtenido correctamente: {token}")
+        logging.info(f"🔑 Token: {token}")
         return token
     else:
-        logging.error(f"❌ Error al obtener token: {response.status_code} - {response.text}")
+        logging.error(f"❌ Error to getting token: {response.status_code} - {response.text}")
         return None

@@ -12,7 +12,7 @@ def update_booking(booking_id, token, updated_data):
         "Cookie": f"token={token}"
     }
     response = requests.put(url, json=updated_data, headers=headers)
-    logging.info(f"🔄 Actualizando reserva ID {booking_id} - Status: {response.status_code}")
+    logging.info(f"🔄 Updating booking ID {booking_id} - Status: {response.status_code}")
     return response
 
 def partial_update_booking(booking_id, token, update_data):

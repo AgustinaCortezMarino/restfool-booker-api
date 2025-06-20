@@ -10,5 +10,5 @@ def delete_booking(booking_id, token):
         "Cookie": f"token={token}"
     }
     response = requests.delete(url, headers=headers)
-    logging.info(f"🗑️ Eliminando reserva {booking_id} - Status: {response.status_code}")
+    logging.info(f"🗑️ Deleting booking {booking_id} - Status: {response.status_code}")
     return response

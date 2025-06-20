@@ -10,30 +10,30 @@ fake = Faker()
 logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
 
 def test_partial_update_booking():
-    # Crear reserva original
+    # Booking creation
     original_data = generate_random_booking_data()
     create_response = create_booking(original_data)
     assert create_response.status_code == 200
     booking_id = create_response.json()["bookingid"]
 
-    # Obtener token válido
+    # Get valid token
     token = get_auth_token()
     assert token is not None
 
-    # Generar nuevo nombre para actualizar
+    # Generate new name to update
     new_firstname = fake.first_name()
     update_data = {
         "firstname": new_firstname
     }
 
-    # Ejecutar PATCH
+    # PATCH
     patch_response = partial_update_booking(booking_id, token, update_data)
     assert patch_response.status_code == 200
 
     response_data = patch_response.json()
     logging.info(f"👑 PATCH Response Data: {response_data}")
 
-    # Validar que solo firstname cambió, y el resto se mantuvo
+    # Validate only first name change
     assert response_data["firstname"] == new_firstname
     assert response_data["lastname"] == original_data["lastname"]
     assert response_data["totalprice"] == original_data["totalprice"]
@@ -42,4 +42,4 @@ def test_partial_update_booking():
     assert response_data["bookingdates"]["checkout"] == original_data["bookingdates"]["checkout"]
     assert response_data["additionalneeds"] == original_data["additionalneeds"]
 
-    logging.info("✅ PATCH exitoso: solo firstname fue actualizado correctamente")
+    logging.info("✅ PATCH passed: only firstname successfully updated")

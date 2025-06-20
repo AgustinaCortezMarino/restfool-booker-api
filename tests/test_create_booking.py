@@ -20,7 +20,7 @@ def test_create_booking():
     assert get_response.status_code == 200
     retrieved_data = get_response.json()
 
-    # Check some fields (los más importantes)
+    # Check some fields
     assert retrieved_data["firstname"] == booking_data["firstname"]
     assert retrieved_data["lastname"] == booking_data["lastname"]
     assert retrieved_data["totalprice"] == booking_data["totalprice"]
