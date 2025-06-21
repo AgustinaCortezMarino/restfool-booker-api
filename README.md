@@ -1,15 +1,22 @@
 # 🧪 RESTful Booker API Test Suite
+
 This project contains a fully automated test suite for the public [Restful Booker API](https://restful-booker.herokuapp.com/).  
 It was developed as part of a technical challenge to showcase clean code practices, modularity, reusability, and effective validation.
+
 ---
+
 ## 🚀 Tech Stack
+
 - 🐍 Python 3
 - ✅ Pytest
 - 🔥 Faker (randomized data generation)
 - 📡 Requests
 - 💻 PyCharm (recommended IDE)
+
 ---
+
 ## 📁 Project Structure
+
     restful-booker-api/
     ├── config/
     │ └── config.py # Base URL, credentials, etc.
@@ -28,29 +35,47 @@ It was developed as part of a technical challenge to showcase clean code practic
     │ └── test_partial_update.py # TC 5.1 - PATCH single field
     ├── requirements.txt
     └── README.md
+
 ---
+
 ## ⚙️ Setup
 
 ### 1. Clone the repository:
+
 - git clone https://github.com/AgustinaCortezMarino/restfool-booker-api
 - cd restful-booker-api
 
 ### 2. Create and activate a virtual environment:
+
 - python -m venv .venv
-- .venv\Scripts\activate   # Windows
+- .venv\Scripts\activate # Windows
 
 ### 3. Install dependencies:
+
 - pip install -r requirements.txt
 
 ### 4. Configuration file: update config/config.py if needed:
+
 - BASE_URL = https://restful-booker.herokuapp.com
 - USERNAME = admin
 - PASSWORD = password123
 
+### 🔐 Environment Setup
+
+To run this project, create a `.env` file in the root folder using the `.env.example` as a template:
+
+```bash
+cp .env.example .env
+
 ---
+
 ## ▶️ Run the Tests
+
 #### Basic test run:
+
 - pytest -v
 
 ## 🙋‍♀️ Author
+
 ### Agustina Cortez Marino
+```
