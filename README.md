@@ -64,8 +64,7 @@ It was developed as part of a technical challenge to showcase clean code practic
 
 To run this project, create a `.env` file in the root folder using the `.env.example` as a template:
 
-```bash
-cp .env.example .env
+- cp .env.example .env
 
 ---
 
